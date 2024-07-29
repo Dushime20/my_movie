@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #000300;
+}
+/* Add this CSS to your stylesheet or within a style tag in your component */
+.slick-slide {
+  margin: 0 5px;
+  display: none; /* Adjust as necessary */
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/* Additional styles to ensure no overflow */
+.slick-prev, .slick-next {
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  display: none;
+}
+
+.slick-next {
+  right: 0; /* Ensure it's within bounds */
+}
