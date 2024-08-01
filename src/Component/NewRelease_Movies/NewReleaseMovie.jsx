@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { NewMovie } from '../../Function/FectchMovie/Fetch';
 import { Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { NavLink, useParams } from 'react-router-dom';
 
 const CustomAccordion = styled(Accordion)(({theme})=>({
   backgroundColor: 'transparent',
@@ -28,6 +29,8 @@ const CustomAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
 const NewReleaseMovie = () => {
 
     const [data,setdata] = useState([]);
+
+    const {id} = useParams;
 
     const [expanded,setExpanded] = useState(false);
     useEffect(()=>{
@@ -54,7 +57,8 @@ const NewReleaseMovie = () => {
           id='panel1a-header"'>
               <div className='flex flex-wrap gap-4 items-start justify-center'>
           {data.slice(0,4).map((item, index) => (
-            <div key={index} className='w-[256px] flex-shrink-0'>
+            <NavLink to={`/details/${item.id}`}>
+              <div key={index} className='w-[256px] flex-shrink-0'>
               <div className='w-[256px] h-[392px]'>
                 <img className='rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.original_title} />
               </div>
@@ -69,12 +73,14 @@ const NewReleaseMovie = () => {
                 </div>
               </div>
             </div>
+            </NavLink>
           ))}
         </div>
           </CustomAccordionSummary>
           <CustomAccordionDetails>
           <div className='flex flex-wrap gap-4 items-start justify-center'>
           {data.slice(4).map((item, index) => (
+            <NavLink to={`/details/${item.id}`}>
             <div key={index} className='w-[256px] flex-shrink-0'>
               <div className='w-[256px] h-[392px]'>
                 <img className='rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.original_title} />
@@ -89,6 +95,7 @@ const NewReleaseMovie = () => {
                 </div>
               </div>
             </div>
+            </NavLink>
           ))}
         </div>
           </CustomAccordionDetails>

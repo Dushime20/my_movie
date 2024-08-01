@@ -3,6 +3,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { Accordion, AccordionSummary, AccordionDetails, Button } from '@mui/material';
 import { newSeries } from "../../Function/FectchMovie/Fetch";
 import { styled } from '@mui/material/styles';
+import { NavLink } from "react-router-dom";
 
 const CustomAccordion = styled(Accordion)(({theme})=>({
   backgroundColor: 'transparent',
@@ -48,6 +49,7 @@ const NewReleaseSeries = () => {
 
         <div className='flex flex-wrap gap-4 items-start justify-center'>
           {data.slice(0,4).map((item) => (
+            <NavLink to={`/details/${item.id}`}>
             <div className="w-[256px] flex-shrink-0 ">
               <div className="w-[256px] h-[392px]">
                 <img
@@ -68,12 +70,14 @@ const NewReleaseSeries = () => {
                 </div>
               </div>
             </div>
+            </NavLink>
           ))}
         </div>
         </CustomAccordionSummary>
         <CustomAccordionDetails>
         <div className='flex flex-wrap gap-4 items-start justify-center'>
           {data.slice(4).map((item) => (
+             <NavLink to={`/details/${item.id}`}>
             <div className="w-[256px] flex-shrink-0 ">
               <div className="w-[256px] h-[392px]">
                 <img
@@ -94,6 +98,7 @@ const NewReleaseSeries = () => {
                 </div>
               </div>
             </div>
+            </NavLink>
           ))}
         </div>
           </CustomAccordionDetails>
