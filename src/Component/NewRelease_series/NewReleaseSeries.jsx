@@ -48,8 +48,8 @@ const NewReleaseSeries = () => {
           id='panel1a-header"'>
 
         <div className='flex flex-wrap gap-4 items-start justify-center'>
-          {data.slice(0,4).map((item) => (
-            <NavLink to={`/details/${item.id}`}>
+          {data.slice(0,4).map((item,index) => (
+            <NavLink key={index} to={`/details/${item.id}`}>
             <div className="w-[256px] flex-shrink-0 ">
               <div className="w-[256px] h-[392px]">
                 <img
@@ -76,8 +76,8 @@ const NewReleaseSeries = () => {
         </CustomAccordionSummary>
         <CustomAccordionDetails>
         <div className='flex flex-wrap gap-4 items-start justify-center'>
-          {data.slice(4).map((item) => (
-             <NavLink to={`/details/${item.id}`}>
+          {data.slice(4).map((item,index) => (
+             <NavLink key={index} to={`/details/${item.id}`}>
             <div className="w-[256px] flex-shrink-0 ">
               <div className="w-[256px] h-[392px]">
                 <img

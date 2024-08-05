@@ -56,9 +56,9 @@ const NewReleaseMovie = () => {
           aria-controls="panel1a-content"
           id='panel1a-header"'>
               <div className='flex flex-wrap gap-4 items-start justify-center'>
-          {data.slice(0,4).map((item, index) => (
-            <NavLink to={`/details/${item.id}`}>
-              <div key={index} className='w-[256px] flex-shrink-0'>
+          {data.slice(0,4).map((item) => (
+            <NavLink to={`/details/${item.id}`} key={item.id}>
+              <div className='w-[256px] flex-shrink-0'>
               <div className='w-[256px] h-[392px]'>
                 <img className='rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.original_title} />
               </div>
@@ -79,9 +79,9 @@ const NewReleaseMovie = () => {
           </CustomAccordionSummary>
           <CustomAccordionDetails>
           <div className='flex flex-wrap gap-4 items-start justify-center'>
-          {data.slice(4).map((item, index) => (
-            <NavLink to={`/details/${item.id}`}>
-            <div key={index} className='w-[256px] flex-shrink-0'>
+          {data.slice(4).map((item) => (
+            <NavLink to={`/details/${item.id}`} key={item.id}>
+            <div  className='w-[256px] flex-shrink-0'>
               <div className='w-[256px] h-[392px]'>
                 <img className='rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover' src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.original_title} />
               </div>

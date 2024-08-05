@@ -65,9 +65,9 @@ const Trending = () => {
             aria-controls="panel1a-content"
             id="panel1a-header">
             <div className="flex flex-wrap gap-4">
-              {data.slice(0, 3).map((item, index) => (
-                <NavLink to={`/details/${item.id}`}>
-                  <div key={index} className="lg:w-[352px] flex-shrink-0">
+              {data.slice(0, 3).map((item) => (
+                <NavLink to={`/details/${item.id}`} key={item.id}>
+                  <div  className="lg:w-[352px] flex-shrink-0">
                     <div className="lg:w-[352px] h-[293px]">
                       <img
                         className="rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover"
@@ -91,9 +91,9 @@ const Trending = () => {
           </CustomAccordionSummary>
           <CustomAccordionDetails>
             <div className="flex flex-wrap gap-4 items-start justify-center">
-              {data.slice(3).map((item, index) => (
-                <NavLink to={`/details/${item.id}`}>
-                  <div key={index} className="lg:w-[352px] flex-shrink-0">
+              {data.slice(3).map((item) => (
+                <NavLink to={`/details/${item.id}`} key={item.id}>
+                  <div className="lg:w-[352px] flex-shrink-0">
                     <div className="lg:w-[352px] h-[293px]">
                       <img
                         className="rounded-md lg:w-full lg:h-full w-[350px] h-[290px] object-cover"

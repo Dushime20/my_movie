@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='my-10'>
+    <div className='my-10 overflow-y-auto'>
       <Carousel
         showThumbs={false}
         autoPlay

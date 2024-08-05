@@ -17,13 +17,13 @@ const Navbar = () => {
         <div className='hidden md:block'>
           <ul className='flex'>
             <li className='p-4 hover:border-b-4 border-red-800'>
-              <NavLink to="/" exact activeClassName="active" className="text-white">Home</NavLink>
+              <NavLink to="/"   className="text-white">Home</NavLink>
             </li>
             <li className='p-4 hover:border-b-4 border-red-800'>
-              <NavLink to="/genre" activeClassName="active" className="text-white">Genre</NavLink>
+              <NavLink to="/genre"  className="text-white">Genre</NavLink>
             </li>
             <li className='p-4 hover:border-b-4 border-red-800'>
-              <NavLink to="/country" activeClassName="active" className="text-white">Country</NavLink>
+              <NavLink to="/country"  className="text-white">Country</NavLink>
             </li>
           </ul>
         </div>
@@ -32,14 +32,14 @@ const Navbar = () => {
         </div>
         <div className='hidden md:block'>
           <ul className='flex'>
-            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/movies" activeClassName="active" className="text-white">Movies</NavLink></li>
-            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/series" activeClassName="active" className="text-white">Series</NavLink></li>
-            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/animation" activeClassName="active" className="text-white">Animation</NavLink></li>
+            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/movies"  className="text-white">Movies</NavLink></li>
+            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/series"  className="text-white">Series</NavLink></li>
+            <li className='p-4 hover:border-b-4 border-red-800'><NavLink to="/animation"  className="text-white">Animation</NavLink></li>
           </ul>
         </div>
         <div className='hidden md:block'>
           <ul className='flex'>
-            <li className='p-4 hover:border-b-4 border-red-800 hidden md:block'><NavLink to="/login-signup" activeClassName="active" className="text-white">Login/SignUp</NavLink></li>
+            <li className='p-4 hover:border-b-4 border-red-800 hidden md:block'><NavLink to="/login-signup"  className="text-white">Login/SignUp</NavLink></li>
             <li className='p-4 cursor-pointer'><IoMdNotifications className="text-white" size={30} /></li>
           </ul>
         </div>
@@ -67,33 +67,33 @@ const Navbar = () => {
           <div>
             <ul>
               <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/" exact activeClassName="active" className="text-white">Home</NavLink>
+                <NavLink to="/"   className="text-white">Home</NavLink>
               </li>
               <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/genre" activeClassName="active" className="text-white">Genre</NavLink>
+                <NavLink to="/genre"  className="text-white">Genre</NavLink>
               </li>
               <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/country" activeClassName="active" className="text-white">Country</NavLink>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/movies" activeClassName="active" className="text-white">Movies</NavLink>
-              </li>
-              <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/series" activeClassName="active" className="text-white">Series</NavLink>
-              </li>
-              <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/animation" activeClassName="active" className="text-white">Animation</NavLink>
+                <NavLink to="/country"  className="text-white">Country</NavLink>
               </li>
             </ul>
           </div>
           <div>
             <ul>
               <li className='p-4 hover:border-b-4 border-red-800'>
-                <NavLink to="/login-signup" activeClassName="active" className="text-white">Login/SignUp</NavLink>
+                <NavLink to="/movies" className="text-white">Movies</NavLink>
+              </li>
+              <li className='p-4 hover:border-b-4 border-red-800'>
+                <NavLink to="/series" className="text-white">Series</NavLink>
+              </li>
+              <li className='p-4 hover:border-b-4 border-red-800'>
+                <NavLink to="/animation" className="text-white">Animation</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li className='p-4 hover:border-b-4 border-red-800'>
+                <NavLink to="/login-signup" className="text-white">Login/SignUp</NavLink>
               </li>
             </ul>
           </div>

@@ -5,6 +5,7 @@ import Card from '../Home/Card';
 import { FaCirclePlay } from "react-icons/fa6";
 
 const MovieDetails = () => {
+  
     const { id } = useParams(); // Correctly destructure useParams
     const navigate = useNavigate();
     const [data, setData] = useState(null); // Initialize data as null

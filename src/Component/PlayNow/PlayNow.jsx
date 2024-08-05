@@ -31,10 +31,11 @@ const PlayNow = () => {
       } else {
         console.error('No video data found');
       }
+    }).catch((error) => {
+      console.error('Error fetching video data:', error);
     });
   }, [id]);
 
-  // Only apply opts on large screens
   const opts = isLargeScreen
     ? {
         height: '390',
@@ -50,18 +51,14 @@ const PlayNow = () => {
           autoplay: 1,
         },
     };
-  // Check if data is loaded and has the expected structure
-  if (!data) {
-    return <div>Loading...</div>;
-  }
 
-  if (!data.key) {
-    return <div>No video available</div>;
+  if (!data?.key) {
+    return <div className='text-gray-300 text-3xl'>No video available</div>;
   }
 
   return (
     <div className="flex items-center justify-center">
-      <YouTube videoId={data.key} opts={opts} />
+      <YouTube videoId={data.key} opts={opts} onError={(e) => console.error('YouTube Player Error:', e)} />
     </div>
   );
 };
